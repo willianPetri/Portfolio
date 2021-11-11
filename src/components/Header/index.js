@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <nav 
-    className="flex justify-between items-center h-16 bg-black text-white 
+    className="flex justify-between items-center h-16 bg-primary text-secondary 
     relative font-mono"
     role="navigation"
     >
