@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
+      cinza: '#e2e8f0',
       goldenzin: '#F2CDAO',
       golden: '#BF8F65',
       primary: '#0D0D0D',
