@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import github from '../../images/github.svg'
-import linkedin from '../../images/linkedin.svg'
 
 const Header = () => {
   return (
@@ -39,11 +37,9 @@ const Header = () => {
         </Link>
         <a href='https://github.com/willianPetri' className="font-semibold inline-block py-3 mr-5 text-secondary">
           <i className='fab fa-github text-lg leading-lg animate-bounce'/>
-          {/* <img src={github} alt="github" className='w-10 h-10 bg-secondary animate-bounce' /> */}
         </a>
         <a href='https://www.linkedin.com/in/willian-petri-84a935135/' className="font-semibold inline-block py-3 mr-5 text-secondary">
         <i className='fab fa-linkedin text-lg leading-lg animate-bounce' />
-          {/* <img src={linkedin} alt="linkedin" className='w-10 h-10  animate-bounce' /> */}
         </a>        
       </div>
     </nav>
