@@ -8,7 +8,7 @@ const Header = () => {
     font-mono relative"
     role="navigation"
     >
-      <Link to="/" className='pl-8'>
+      <Link to="hero" className='pl-8'>
         Willian Petri
       </Link>
       {/* <div className="px-4 cursor-pointer md-hidden">
@@ -29,13 +29,13 @@ const Header = () => {
       </div> */}
       {/* colocar o hidden no className da div */}
       <div className="flex items-center">
-        <Link to='skills' spy={true} smooth={true} offset={-20} duration={500} className="p-4 mr-3">
+        <Link to='skills' spy={true} smooth={true} offset={-20} duration={700} className="p-4 mr-3">
           Habilidades
         </Link>
-        <Link to='experience' spy={true} smooth={true} offset={-20} duration={500} className="p-4 mr-5">
+        <Link to='experience' spy={true} smooth={true} offset={-20} duration={1000} className="p-4 mr-5">
           Experiências
         </Link>
-        <Link to='portfolio' spy={true} smooth={true} offset={50} duration={500} className="p-4 mr-5">
+        <Link to='portfolio' spy={true} smooth={true} offset={50} duration={1200} className="p-4 mr-5">
           Projetos
         </Link>
         <a href='https://github.com/willianPetri' target="_blank" rel="noopener noreferrer"  className="font-semibold inline-block py-3 mr-5 text-secondary">
