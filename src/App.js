@@ -18,14 +18,14 @@ function App() {
       {/* perfil */}
       <Hero />
 
-      {/* projetos */}
-      <Portfolio />
-
       {/* Skills e experiências */}
       <Skills />
 
       {/* Experiência */}
       <Experience />
+
+      {/* projetos */}
+      <Portfolio />
 
       {/* footer */}
       <Footer />

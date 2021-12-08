@@ -12,7 +12,7 @@ const s1 = {
   image: Icon1
 }
 const s2 = {
-  title: 'CSS3',
+  title: 'CSS',
   image: Icon2
 }
 const s3 = {
@@ -20,7 +20,7 @@ const s3 = {
   image: Icon3
 }
 const s4 = {
-  title: 'Sass',
+  title: 'Tailwindcss',
   image: Icon4
 }
 const s5 = {

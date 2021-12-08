@@ -13,7 +13,10 @@ module.exports = {
         light_bg: '#1a1a1a',
         blackzin: '#0d0d0d',
         light_color: '#aaa',
-      }
+      },
+      flex: {
+        '1140': '1 1 40rem',
+      },
     },    
   },
   variants: {

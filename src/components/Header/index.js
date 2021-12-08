@@ -30,7 +30,10 @@ const Header = () => {
       {/* colocar o hidden no className da div */}
       <div className="flex items-center">
         <Link to='/' className="p-4 mr-3">
-          Quem Sou
+          Habilidades
+        </Link>
+        <Link to='/' className="p-4 mr-5">
+          Experiências
         </Link>
         <Link to='/' className="p-4 mr-5">
           Projetos
