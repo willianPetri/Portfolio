@@ -38,11 +38,11 @@ const Header = () => {
         <Link to='/' className="p-4 mr-5">
           Projetos
         </Link>
-        <a href='https://github.com/willianPetri' className="font-semibold inline-block py-3 mr-5 text-secondary">
+        <a href='https://github.com/willianPetri' target="_blank" rel="noopener noreferrer"  className="font-semibold inline-block py-3 mr-5 text-secondary">
           <i className='fab fa-github text-lg leading-lg animate-bounce'/>
         </a>
-        <a href='https://www.linkedin.com/in/willian-petri-84a935135/' className="font-semibold inline-block py-3 mr-5 text-secondary">
-        <i className='fab fa-linkedin text-lg leading-lg animate-bounce' />
+        <a href='https://www.linkedin.com/in/willian-petri-84a935135/' target="_blank" rel="noopener noreferrer"  className="font-semibold inline-block py-3 mr-5 text-secondary">
+          <i className='fab fa-linkedin text-lg leading-lg animate-bounce' />
         </a>        
       </div>
     </nav>

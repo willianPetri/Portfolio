@@ -1,29 +1,62 @@
 import React, { useState } from 'react'
-import foto from '../../images/port.jpg';
+import skate from '../../images/skate.jpg';
+import finance from '../../images/finance.jpg';
+import dashboard from '../../images/dashboard.jpg';
+import amazon from '../../images/amazon.jpg';
+import barber from '../../images/barber.jpg';
+import barberMobile from '../../images/barberMobile.jpg';
 
 const projeto1 = {
-  title: 'Projeto 1',
-  language: 'React',
-  image: foto
+  title: 'Skateboard',
+  language: 'React e TailwindCss',
+  about: 'Praticar o framework tailwindcss',
+  site: 'https://modest-turing-28b005.netlify.app/',
+  github: 'https://github.com/willianPetri/Skate',
+  image: skate
 }
 const projeto2 = {
-  title: 'Projeto 2',
-  language: 'Typescript',
-  image: foto
+  title: 'Expense Tracker',
+  language: 'React, Typescript, Styled-components',
+  about: 'Sistema Financeiro, controle de despesas',
+  site: 'https://jolly-dubinsky-898d51.netlify.app/',
+  github: 'https://github.com/willianPetri/SistemaFinanceiro',
+  image: finance
 }
 const projeto3 = {
-  title: 'Projeto 3',
-  language: 'Node',
-  image: foto
+  title: 'Dashboard',
+  language: 'React e TailwindCss',
+  about: 'Praticar o framework tailwindcss',
+  site: 'https://pedantic-goldwasser-d11ad3.netlify.app/',
+  github: 'https://github.com/willianPetri/Dashboard',
+  image: dashboard
 }
 const projeto4 = {
-  title: 'Projeto 4',
-  language: 'Tailwind',
-  image: foto
+  title: 'Amazon Clone',
+  language: 'React, Firebase, Stripe, Axios',
+  about: 'Ecommerce',
+  site: 'https://challenge-9415e.web.app/',
+  github: 'https://github.com/willianPetri/Amazon-clone',
+  image: amazon
+}
+const projeto5 = {
+  title: 'GoBarber backend',
+  language: 'Node, Typescript, Express, JWT, MongoDB, Redis, Postgres, AWS e TypeORM',
+  about: 'Controle de agendamento da barbearia',
+  site: 'F',
+  github: 'https://github.com/willianPetri/GoBarber-backend',
+  image: barber
+}
+const projeto6 = {
+  title: 'GoBarber Mobile',
+  language: 'React Native, Typescript, Axios, Styled-components, Day-Picker',
+  about: 'Fazer o agendamento do corte de cabelo na barbearia',
+  site: 'F',
+  github: 'https://github.com/willianPetri/GoBarber-mobile',
+  image: barberMobile
 }
 
 const Portfolio = () => {
-  const [projetos, setProjetos] = useState([projeto1, projeto2, projeto3, projeto4]);
+  const [projetos, setProjetos] = useState([projeto1, projeto2, projeto3, projeto4, projeto5, projeto6]);
 
   return (
     <div className="text-gray-700 body-font">
@@ -31,7 +64,7 @@ const Portfolio = () => {
         <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 text-left">
-              Meus Projetos
+              Projetos
             </h1>
             <div className="h-1 w-20 bg-secondary rounded"></div>
           </div>
@@ -44,11 +77,12 @@ const Portfolio = () => {
               <div className='absolute top-0 left-0 h-full w-full bg-light_bg flex flex-col items-center justify-center p-8 transform -translate-y-full transition delay-75 duration-700  group-hover:translate-y-0'>
                 <h3 className='text-3xl text-white uppercase font-medium mb-4'>{projeto.title}</h3>
                 <p className='px-4 py-0 text-xl text-light_color'>{projeto.language}</p>
+                <p className='px-4 py-0 text-lg text-light_color mt-4'>{projeto.about}</p>
                 <div className='space-x-7 mt-6'>
-                  <a href="/" className='text-3xl text-red-600 hover:text-white'>
+                  <a href={projeto.site} target="_blank" rel="noopener noreferrer" className={`${projeto.site === 'F' ? 'hidden' : 'text-2xl text-red-600 hover:text-white'}`}>
                     Site
                   </a>
-                  <a href="/" className='text-3xl text-red-600 hover:text-white'>
+                  <a href={projeto.github} target="_blank" rel="noopener noreferrer" className='text-2xl text-red-600 hover:text-white'>
                     Github
                   </a>
                 </div>
