@@ -49,14 +49,14 @@ const Skills = () => {
     Aos.init({
       delay: 200,
       duration: 1200,
-      once: false
+      once: true
     })
   }, []);
 
   const [skills, setSkills] = useState([s1, s2, s3, s4, s5, s6, s7, s8]);
   return (
     <>
-      <div className="flex flex-wrap w-full mb-20">
+      <div className="flex flex-wrap w-full mb-20" id='skills'>
         <div className="lg:w-1/2 w-full mb-6 lg:mb-0 ml-10">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 text-left">
             Habilidades

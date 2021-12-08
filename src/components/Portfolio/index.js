@@ -62,14 +62,14 @@ const Portfolio = () => {
     Aos.init({
       delay: 200,
       duration: 1200,
-      once: false
+      once: true
     })
   }, []);
 
   const [projetos, setProjetos] = useState([projeto1, projeto2, projeto3, projeto4, projeto5, projeto6]);
 
   return (
-    <div className="text-gray-700 body-font">
+    <div className="text-gray-700 body-font" id='portfolio'>
       <div className='container px-5 py-24 mx-auto'>
         <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">

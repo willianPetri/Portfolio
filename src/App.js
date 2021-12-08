@@ -7,29 +7,16 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 
 
-function App() {
 
-  
+function App() {
   return (
     <div className="App overflow-x-hidden">
-      {/* Header */}
-      <Header />
-
-      {/* perfil */}
+      <Header />      
       <Hero />
-
-      {/* Skills e experiências */}
       <Skills />
-
-      {/* Experiência */}
       <Experience />
-
-      {/* projetos */}
       <Portfolio />
-
-      {/* footer */}
       <Footer />
-
     </div>
   );
 }
