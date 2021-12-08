@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 import Icon1 from '../../icons/icon-1.png'
 import Icon2 from '../../icons/icon-2.png'
 import Icon3 from '../../icons/icon-3.png'
@@ -40,7 +42,17 @@ const s8 = {
   image: Icon7
 }
 
+
 const Skills = () => {
+
+  useEffect(() => {
+    Aos.init({
+      delay: 200,
+      duration: 1200,
+      once: false
+    })
+  }, []);
+
   const [skills, setSkills] = useState([s1, s2, s3, s4, s5, s6, s7, s8]);
   return (
     <>
@@ -55,7 +67,7 @@ const Skills = () => {
 
       <div className='grid md:grid-cols-4 grid-cols-2 gap-6 mb-20'>
         {skills.map(skill => (
-          <div className='flex flex-wrap items-center  justify-center p-8 w-56 h-56 shadow-lg rounded-lg bg-gray-100 group hover:bg-golden mx-auto mb-4'>
+          <div className='flex flex-wrap items-center  justify-center p-8 w-56 h-56 shadow-lg rounded-lg bg-gray-100 group hover:bg-golden mx-auto mb-4' data-aos='flip-right'>
             <img src={skill.image} alt="" className='h-28 mb-4 w-full object-contain' />
             <h3 className='text-2xl text-black font-normal uppercase'>{skill.title}</h3>
           </div>        
