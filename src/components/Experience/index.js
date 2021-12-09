@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'
 const Experience = () => {
   useEffect(() => {
     Aos.init({
-      delay: 200,
+      delay: 400,
       duration: 1200,
       once: true
     })

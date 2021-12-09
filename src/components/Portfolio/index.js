@@ -60,12 +60,14 @@ const projeto6 = {
 const Portfolio = () => {
   useEffect(() => {
     Aos.init({
-      delay: 200,
-      duration: 1200,
+      delay: 1000,
+      duration: 1500,
+      easing: 'linear',
       once: true
     })
   }, []);
 
+  // eslint-disable-next-line
   const [projetos, setProjetos] = useState([projeto1, projeto2, projeto3, projeto4, projeto5, projeto6]);
 
   return (
@@ -82,7 +84,7 @@ const Portfolio = () => {
 
         <div className='grid md:grid-cols-3 grid-cols-1 gap-8'>
           {projetos.map(projeto => (
-            <div className='h-96 overflow-hidden relative ml-8 group' data-aos='zoom-in-up'>
+            <div className='h-96 overflow-hidden relative ml-8 group' data-aos='fade-down' key={projeto.title}>
               <img src={projeto.image} alt="" className='h-full w-full object-cover' />
               <div className='absolute top-0 left-0 h-full w-full bg-light_bg flex flex-col items-center justify-center p-8 transform -translate-y-full transition delay-75 duration-700  group-hover:translate-y-0'>
                 <h3 className='text-3xl text-white uppercase font-medium mb-4'>{projeto.title}</h3>
