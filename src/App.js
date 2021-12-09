@@ -10,7 +10,7 @@ import Experience from './components/Experience';
 
 function App() {
   return (
-    <div className="App overflow-x-hidden">
+    <div className="App">
       <Header />      
       <Hero />
       <Skills />

@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 
 const Header = () => {
+  const [skills, setSkills] = useState(false);
+  const [experience, setExperience] = useState(false);
+  const [portfolio, setPortfolio] = useState(false);
+
   return (
     <nav 
     className="flex justify-between items-center h-16 bg-primary text-secondary 
-    font-mono relative"
+    font-mono sticky top-0 z-50"
     role="navigation"
     >
-      <Link to="hero" className='pl-8'>
+      <Link 
+        to="hero" 
+        smooth={true} 
+        spy={true} 
+        offset={-70} 
+        duration={800} 
+        className='pl-8'
+      >
         Willian Petri
       </Link>
       {/* <div className="px-4 cursor-pointer md-hidden">
@@ -27,16 +38,45 @@ const Header = () => {
           />
         </svg>
       </div> */}
-      {/* colocar o hidden no className da div */}
       <div className="flex items-center">
-        <Link to='skills' spy={true} smooth={true} offset={-20} duration={700} className="p-4 mr-3">
-          Habilidades
+        <Link 
+          to='skills' 
+          spy={true} 
+          smooth={true} 
+          offset={-100} 
+          duration={700} 
+          onSetActive={() => setSkills(true)}
+          onSetInactive={() => setSkills(false)} 
+          className="p-4 mr-3"
+        >
+          Habilidades  
+          <div className={`${skills === true ? "h-0.5 w-20 bg-secondary rounded" : 'hidden'}`} />        
         </Link>
-        <Link to='experience' spy={true} smooth={true} offset={-20} duration={1000} className="p-4 mr-5">
+        <Link 
+          to='experience' 
+          spy={true} 
+          smooth={true} 
+          offset={-100} 
+          duration={1000} 
+          onSetActive={() => setExperience(true)} 
+          onSetInactive={() => setExperience(false)}
+          className="p-4 mr-5"
+        >
           Experiências
+          <div className={`${experience === true ? "h-0.5 w-20 bg-secondary rounded" : 'hidden'}`} />        
         </Link>
-        <Link to='portfolio' spy={true} smooth={true} offset={50} duration={1200} className="p-4 mr-5">
+        <Link 
+          to='portfolio' 
+          spy={true} 
+          smooth={true} 
+          offset={0} 
+          duration={1200} 
+          onSetActive={() => setPortfolio(true)} 
+          onSetInactive={() => setPortfolio(false)}
+          className="p-4 mr-5"
+        >
           Projetos
+          <div className={`${portfolio === true ? "h-0.5 w-20 bg-secondary rounded" : 'hidden'}`} />        
         </Link>
         <a href='https://github.com/willianPetri' target="_blank" rel="noopener noreferrer"  className="font-semibold inline-block py-3 mr-5 text-secondary">
           <i className='fab fa-github text-lg leading-lg animate-bounce'/>

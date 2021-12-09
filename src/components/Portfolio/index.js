@@ -11,7 +11,7 @@ import barberMobile from '../../images/barberMobile.jpg';
 const projeto1 = {
   title: 'Skateboard',
   language: 'React e TailwindCss',
-  about: 'Praticar o framework tailwindcss',
+  about: 'Praticando o framework tailwindcss',
   site: 'https://modest-turing-28b005.netlify.app/',
   github: 'https://github.com/willianPetri/Skate',
   image: skate
@@ -27,7 +27,7 @@ const projeto2 = {
 const projeto3 = {
   title: 'Dashboard',
   language: 'React e TailwindCss',
-  about: 'Praticar o framework tailwindcss',
+  about: 'Praticando o framework tailwindcss',
   site: 'https://pedantic-goldwasser-d11ad3.netlify.app/',
   github: 'https://github.com/willianPetri/Dashboard',
   image: dashboard
@@ -35,7 +35,7 @@ const projeto3 = {
 const projeto4 = {
   title: 'Amazon Clone',
   language: 'React, Firebase, Stripe, Axios',
-  about: 'Ecommerce',
+  about: 'Cópia do ecommerce da Amazon ',
   site: 'https://challenge-9415e.web.app/',
   github: 'https://github.com/willianPetri/Amazon-clone',
   image: amazon
