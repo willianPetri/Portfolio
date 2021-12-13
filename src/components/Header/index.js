@@ -10,8 +10,8 @@ const Header = () => {
   return (
     <>     
       <nav className="fixed w-full z-50 top-0 md:h-16 flex flex-wrap items-center justify-between px-2 py-3 bg-primary text-secondary mb-3">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between md:justify-start md:w-auto md:static md:block ">
+        <div className="container px-4 mx-auto flex flex-wrap justify-between">
+          <div className="w-full relative flex pt-1 justify-between md:justify-start md:w-auto md:static md:block ">
             <Link
               to="hero"
               smooth={true}
