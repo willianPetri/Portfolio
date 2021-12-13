@@ -3,89 +3,93 @@ import { Link } from 'react-scroll'
 
 const Header = () => {
   const [skills, setSkills] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const [experience, setExperience] = useState(false);
   const [portfolio, setPortfolio] = useState(false);
 
   return (
-    <nav 
-    className="flex justify-between items-center h-16 bg-primary text-secondary 
-    font-mono fixed top-0 z-50 w-full"
-    role="navigation"
-    >
-      <Link 
-        to="hero" 
-        smooth={true} 
-        spy={true} 
-        offset={-70} 
-        duration={800} 
-        className='pl-8'
-      >
-        Willian Petri
-      </Link>
-      {/* <div className="px-4 cursor-pointer md-hidden">
-      <svg 
-          className="h-6 w-6" 
-          fill="none" 
-          stroke="currentColor"
-          viewBox="0 0 24 24" 
-          xmlns="http://www.w3.org/2000/svg" 
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={2} 
-            d="M4 6h16M4 12h16M4 18h16" 
-          />
-        </svg>
-      </div> */}
-      <div className="flex items-center">
-        <Link 
-          to='skills' 
-          spy={true} 
-          smooth={true} 
-          offset={-100} 
-          duration={700} 
-          onSetActive={() => setSkills(true)}
-          onSetInactive={() => setSkills(false)} 
-          className="p-4 mr-3"
-        >
-          Habilidades  
-          <div className={`${skills === true ? "h-0.5 w-20 bg-secondary rounded" : 'hidden'}`} />        
-        </Link>
-        <Link 
-          to='experience' 
-          spy={true} 
-          smooth={true} 
-          offset={-100} 
-          duration={1000} 
-          onSetActive={() => setExperience(true)} 
-          onSetInactive={() => setExperience(false)}
-          className="p-4 mr-5"
-        >
-          Experiências
-          <div className={`${experience === true ? "h-0.5 w-20 bg-secondary rounded" : 'hidden'}`} />        
-        </Link>
-        <Link 
-          to='portfolio' 
-          spy={true} 
-          smooth={true} 
-          offset={0} 
-          duration={1200} 
-          onSetActive={() => setPortfolio(true)} 
-          onSetInactive={() => setPortfolio(false)}
-          className="p-4 mr-5"
-        >
-          Projetos
-          <div className={`${portfolio === true ? "h-0.5 w-20 bg-secondary rounded" : 'hidden'}`} />        
-        </Link>
-        <a href='https://github.com/willianPetri' target="_blank" rel="noopener noreferrer"  className="font-semibold inline-block py-3 mr-5 text-secondary">
-          <i className='fab fa-github text-lg leading-lg animate-bounce'/>
-        </a>
-        <a href='https://www.linkedin.com/in/willian-petri-84a935135/' target="_blank" rel="noopener noreferrer"  className="font-semibold inline-block py-3 mr-5 text-secondary">
-          <i className='fab fa-linkedin text-lg leading-lg animate-bounce' />
-        </a>        
-      </div>
-    </nav>
+    <>     
+      <nav className="fixed w-full z-50 top-0 md:h-16 flex flex-wrap items-center justify-between px-2 py-3 bg-primary text-secondary mb-3">
+        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+          <div className="w-full relative flex justify-between md:justify-start md:w-auto md:static md:block ">
+            <Link
+              to="hero"
+              smooth={true}
+              spy={true}
+              offset={-70}
+              duration={800}
+              className='pl-4 text-xl font-medium cursor-pointer'
+            >
+              Willian Petri
+            </Link>
+            <button
+              className="text-secondary cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setToggle(!toggle)}
+            >
+              <i className="fas fa-bars" />
+            </button>
+          </div>
+          <div className={`md:flex flex-grow ${toggle ? 'flex items-center justify-center' : 'hidden'}`}>
+            <ul className="flex flex-col md:flex-row list-none md:ml-auto">
+              <li className='inline-block cursor-pointer px-4 py-2'>
+                <Link
+                  to='skills'
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={700}
+                  onSetActive={() => setSkills(true)}
+                  onSetInactive={() => setSkills(false)}
+                >
+                  Habilidades
+                  <div className={`${skills === true ? "h-0.5 w-20 bg-secondary rounded" : 'hidden'}`} />
+                </Link>
+              </li>
+              <li className='inline-block cursor-pointer px-4 py-2'>
+                <Link
+                  to='experience'
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={1000}
+                  onSetActive={() => setExperience(true)}
+                  onSetInactive={() => setExperience(false)}
+                >
+                  Experiências
+                  <div className={`${experience === true ? "h-0.5 w-20 bg-secondary rounded" : 'hidden'}`} />
+                </Link>
+              </li>
+              <li className='inline-block cursor-pointer px-4 py-2'>
+                <Link
+                  to='portfolio'
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1200}
+                  onSetActive={() => setPortfolio(true)}
+                  onSetInactive={() => setPortfolio(false)}
+                >
+                  Projetos
+                  <div className={`${portfolio === true ? "h-0.5 w-14 ml-4 md:ml-0 bg-secondary rounded" : 'hidden'}`} />
+                </Link>
+              </li>
+              <li className='inline-block cursor-pointer px-4'>
+                <a href='https://github.com/willianPetri' target="_blank" rel="noopener noreferrer" className="font-semibold inline-block py-3 mr-5 text-secondary">
+                  <i className='fab fa-github text-lg leading-lg animate-bounce' />
+                </a>
+              </li>
+
+              <li className='inline-block cursor-pointer px-4'>
+                <a href='https://www.linkedin.com/in/willian-petri-84a935135/' target="_blank" rel="noopener noreferrer" className="font-semibold inline-block py-3 mr-5 text-secondary">
+                  <i className='fab fa-linkedin text-lg leading-lg animate-bounce' />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>    
+    </>
   )
 }
 
