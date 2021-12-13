@@ -36,6 +36,7 @@ const Experience = () => {
     })
   }, []);
 
+// eslint-disable-next-line
 const [experiences, setExperiencies] = useState([xp1, xp2, xp3, xp4]);
 
   return (
