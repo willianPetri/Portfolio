@@ -60,7 +60,7 @@ const projeto6 = {
 const Portfolio = () => {
   useEffect(() => {
     Aos.init({
-      delay: 1000,
+      delay: 400,
       duration: 1500,
       easing: 'linear',
       once: true
