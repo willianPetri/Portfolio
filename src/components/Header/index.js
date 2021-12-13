@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <nav 
     className="flex justify-between items-center h-16 bg-primary text-secondary 
-    font-mono sticky top-0 z-50"
+    font-mono fixed top-0 z-50 w-full"
     role="navigation"
     >
       <Link 
