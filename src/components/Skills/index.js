@@ -66,7 +66,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className='grid md:grid-cols-4 grid-cols-2 gap-6 mb-20'>
+      <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 mb-20'>
         {skills.map(skill => (
           <div key={skill.title} className='flex flex-wrap items-center  justify-center p-8 w-56 h-56 shadow-lg rounded-lg bg-gray-100 group hover:bg-golden mx-auto mb-4' data-aos='flip-right'>
             <img src={skill.image} alt="" className='h-28 mb-4 w-full object-contain' />
